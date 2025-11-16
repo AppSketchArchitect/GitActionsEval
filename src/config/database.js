@@ -12,11 +12,11 @@ const {
 const uri = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB_NAME}?authSource=admin`;
 
 function connectDB() {
-    return mongoose.connect(uri);
+  return mongoose.connect(uri);
 }
 
 function disconnectDB() {
-    return mongoose.disconnect();
+  return mongoose.disconnect();
 }
 
-module.exports = { connectDB, disconnectDB }
+module.exports = { connectDB, disconnectDB };

@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Route permettant de savoir si le serveur est allumé et accessible
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok' })
+  res.status(200).json({ status: 'ok' });
 });
 
 app.use('/api/request-types', requestTypesRouter);

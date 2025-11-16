@@ -1,7 +1,14 @@
 const express = require('express');
 const RequestType = require('../models/requestType');
+const { seed } = require('../../scripts/seed');
 
 const router = express.Router();
+
+// POST /api/request-types/seed : Populate database
+router.post('/seed', (req, res) => {
+  seed();
+  res.status(200).send();
+});
 
 // GET /api/request-types : liste tous les types actifs
 router.get('/', async (req, res) => {
@@ -13,7 +20,6 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
-
 
 // GET /api/request-types/:id : récupère un type par ID
 router.get('/:id', async (req, res) => {
@@ -34,7 +40,15 @@ router.get('/:id', async (req, res) => {
 // POST /api/request-types : crée un nouveau type
 router.post('/', async (req, res) => {
   try {
-    const { code, name, description, priority, category, estimatedResponseTime, isActive } = req.body;
+    const {
+      code,
+      name,
+      description,
+      priority,
+      category,
+      estimatedResponseTime,
+      isActive,
+    } = req.body;
 
     const created = await RequestType.create({
       code,
