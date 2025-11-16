@@ -1,5 +1,5 @@
 const { connectDB, disconnectDB } = require('../src/config/database');
-const RequestType = require('../src/models/requestType');
+const RequestType = require('../src/models/RequestType');
 
 async function seed() {
   try {

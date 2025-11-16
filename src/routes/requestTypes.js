@@ -1,5 +1,5 @@
 const express = require('express');
-const RequestType = require('../models/requestType');
+const RequestType = require('../models/RequestType');
 
 const router = express.Router();
 

@@ -2,7 +2,7 @@ const request = require('supertest');
 const mongoose = require('mongoose');
 const app = require('../src/server');
 const { connectDB, disconnectDB } = require('../src/config/database');
-const RequestType = require('../src/models/requestType');
+const RequestType = require('../src/models/RequestType');
 
 beforeAll(async () => {
   await connectDB();
