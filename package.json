@@ -13,7 +13,8 @@
     "format:check": "prettier . --check .",
     "test": "jest --coverage",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "seed": "node scripts/seed.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
