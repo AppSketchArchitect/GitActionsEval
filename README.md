@@ -31,7 +31,14 @@ Ces règles sont importantes pour vérifier que le code déployé par les dével
 
 ### Badges de status des pull requests
 
+Pull Request n°1
 ![alt text](images/badge_pr1.png)
+
+Pull Request n°2
+![alt text](images/badge_pr2.png)
+
+Pull Request n°3
+(Prochain commit)
 
 ### Explication des jobs effectués
 
@@ -220,3 +227,31 @@ Response:
 ## Section 4
 
 ### Arborescence
+
+```
+├── .github/
+│   └── workflows/
+│       └── ci.yml              # Pipeline GitHub Actions (lint, tests, coverage)
+├── images/*                    # Pour la documentation
+├── scripts/
+│   └── seed.js                 # Script de seed de la base MongoDB
+├── src/
+│   ├── config/
+│   │   └── database.js         # Configuration et connexion à MongoDB
+│   ├── models/
+│   │   └── requestType.js      # Modèle Mongoose RequestType
+│   ├── routes/
+│   │   └── requestTypes.js     # Routes Express /api/request-types
+│   └── server.js               # Serveur Express (boot API + /health)
+├── tests/
+│   └── requestTypes.test.js    # Tests Jest + Supertest (health + API)
+├── docker-compose.yml          # Conteneur MongoDB (développement)
+├── eslint.config.mjs           # Configuration ESLint
+├── jest.config.cjs             # Configuration Jest (coverage, env)
+├── .prettierrc                 # Configuration Prettier
+├── .prettierignore             # Fichiers exclus du formatage
+├── .gitignore                  # Fichiers/dossiers ignorés par Git
+├── package.json                # Dépendances + scripts npm
+├── package-lock.json           # Lockfile npm
+└── README.md                   # Documentation du projet
+```
