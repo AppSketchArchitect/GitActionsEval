@@ -11,7 +11,9 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write .",
     "format:check": "prettier . --check .",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start": "node src/server.js",
+    "seed": "node scripts/seed.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -20,5 +22,10 @@
     "jest": "^30.2.0",
     "prettier": "^3.6.2",
     "supertest": "^7.1.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.4"
   }
 }
