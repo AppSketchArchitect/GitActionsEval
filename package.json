@@ -13,6 +13,7 @@
     "format:check": "prettier . --check .",
     "test": "jest --coverage",
     "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
     "seed": "node scripts/seed.js"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
     "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
     "prettier": "^3.6.2",
     "supertest": "^7.1.4"
   },
