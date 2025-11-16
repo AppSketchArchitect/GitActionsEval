@@ -31,7 +31,11 @@ Ces règles sont importantes pour vérifier que le code déployé par les dével
 
 ### Badges de status des pull requests
 
+Pull Request n°1
 ![alt text](images/badge_pr1.png)
+
+Pull Request n°2
+![alt text](images/badge_pr2.png)
 
 ### Explication des jobs effectués
 
