@@ -38,7 +38,7 @@ Pull Request n°2
 ![alt text](images/badge_pr2.png)
 
 Pull Request n°3
-(Prochain commit)
+![alt text](images/badge_pr3.png)
 
 ### Explication des jobs effectués
 
