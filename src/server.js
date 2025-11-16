@@ -16,18 +16,14 @@ app.use('/api/request-types', requestTypesRouter);
 const SERVER_PORT = process.env.SERVER_PORT;
 
 // On se connecte à la base de données
-connectDB()
+if(require.main === module){
+  connectDB()
   .then(() => {
-    // Si la connexion réussi alors on démarre le serveur
     console.log('MongoDB connected');
     app.listen(SERVER_PORT, () => {
       console.log(`Server listening on port ${SERVER_PORT}`);
     });
-  })
-  .catch((err) => {
-    // Sinon on quitte le lancement
-    console.error('MongoDB connection failed', err);
-    process.exit(1);
   });
+}
 
 module.exports = app;
