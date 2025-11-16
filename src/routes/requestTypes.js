@@ -1,14 +1,7 @@
 const express = require('express');
 const RequestType = require('../models/requestType');
-const { seed } = require('../../scripts/seed');
 
 const router = express.Router();
-
-// POST /api/request-types/seed : Populate database
-router.post('/seed', (req, res) => {
-  seed();
-  res.status(200).send();
-});
 
 // GET /api/request-types : liste tous les types actifs
 router.get('/', async (req, res) => {

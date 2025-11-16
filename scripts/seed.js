@@ -1,7 +1,10 @@
+const { connectDB, disconnectDB } = require('../src/config/database');
 const RequestType = require('../src/models/requestType');
 
 async function seed() {
   try {
+    await connectDB();
+
     await RequestType.deleteMany({});
 
     await RequestType.insertMany([
@@ -55,6 +58,8 @@ async function seed() {
     ]);
   } catch (error) {
     console.error('Seed failed: ', error);
+  } finally {
+    await disconnectDB();
   }
 }
 
