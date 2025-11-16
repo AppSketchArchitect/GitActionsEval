@@ -8,4 +8,4 @@ module.exports = {
       functions: 70,
     },
   },
-}
+};

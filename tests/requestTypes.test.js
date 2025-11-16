@@ -40,9 +40,7 @@ describe('API RequestTypes', () => {
       isActive: true,
     };
 
-    const res = await request(app)
-      .post('/api/request-types')
-      .send(payload);
+    const res = await request(app).post('/api/request-types').send(payload);
 
     expect(res.status).toBe(201);
     expect(res.body).toMatchObject({
@@ -93,9 +91,7 @@ describe('API RequestTypes', () => {
   });
 
   test('POST /api/request-types : retourne 400 si payload invalide', async () => {
-    const res = await request(app)
-      .post('/api/request-types')
-      .send({}); // rien du tout
+    const res = await request(app).post('/api/request-types').send({}); // rien du tout
 
     expect(res.status).toBe(400);
     expect(res.body).toEqual({ message: 'Invalid payload' });

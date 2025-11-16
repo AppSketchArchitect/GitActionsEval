@@ -16,9 +16,8 @@ app.use('/api/request-types', requestTypesRouter);
 const SERVER_PORT = process.env.SERVER_PORT;
 
 // On se connecte à la base de données
-if(require.main === module){
-  connectDB()
-  .then(() => {
+if (require.main === module) {
+  connectDB().then(() => {
     console.log('MongoDB connected');
     app.listen(SERVER_PORT, () => {
       console.log(`Server listening on port ${SERVER_PORT}`);
